@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Pizza</title>
+    <script type="text/javascript">
+    function preppizza() {
+      var checkboxes = document.forms["pizzaform"].toppingcheck.length;
+    var newelement = document.createElement("p");
+    document.body.appendChild(newelement);
+    newelement.appendChild(document.createTextNode("This pizza will have:"));
+
+    for (var i =0; i < checkboxes; i++) {
+      if (document.forms["pizzaform"].toppingcheck[i].checked) {
+        var newelement = document.createElement("p");
+        document.body.appendChild(newelement);
+        newelement.appendChild(document.createTextNode(document.forms["pizzaform"].toppingcheck[i].value));
+      }
+    }
+}
+
+// var divs = document.getElementByTagName('div');
+//  i = divs.length;
+//  while (i) {
+//   i-=1;
+//   if (divs[1].getAttribute('value') !=0) {
+//     divs[i].parentNode.removeChild(divs[i]);
+//   }
+//  }
+    // Create function preppizza
+    //     append a paragraph that says "This pizza will have: " below the form ( using .createElement, .appendChild, and .createTextNode)
+    //     create variable for the number of checkboxes
+    //     loop through the inputs
+    //         if (the checkbox is checked)
+    //             append a paragraph with the value in input
+    //         else
+    //             do nothing
+  // (function check()
+  // {
+  // document.getElementById("document.forms["pizzaform"][0]).checked=true
+// function flip(preppizza) {
+//         if               (document.forms["pizzaform"].["Sausage"].checked === true)  {     
+//             console.log("Sausage");
+//         } else if        (boxes.value === 1){
+//             document.write("Pepperoni");
+//         } else if        (boxes.value === 2){
+//             document.write("Ham");
+//         } else if        (boxes.value === 3){
+//             document.write("Green Peppers");
+//         } else if        (boxes.value === 4){
+//             document.write("Mushrooms");
+//         } else if        (boxes.value === 5){
+//             document.write("Onions");
+//         } else if        (boxes.value === 6){
+//             document.write("Pineapple");
+            
+//     };
+
+
+    </script>
+</head>
+<body>
+<form id="pizzaform" action="#">
+<p>Toppings:</p>
+<input type="checkbox" id="topping1" value="Sausage" 
+    name="toppingcheck">Sausage<br>
+<input type="checkbox" id="topping2" value="Pepperoni" 
+    name="toppingcheck">Pepperoni<br>
+<input type="checkbox" id="topping3" value="Ham" 
+    name="toppingcheck">Ham<br>
+<input type="checkbox" id="topping4" value="Green Peppers" 
+    name="toppingcheck">Green Peppers<br>
+<input type="checkbox" id="topping5" value="Mushrooms" 
+    name="toppingcheck">Mushrooms<br>
+<input type="checkbox" id="topping6" value="Onions" 
+    name="toppingcheck">Onions<br>
+<input type="checkbox" id="topping7" value="Pineapple" 
+    name="toppingcheck">Pineapple<br>
+
+<p><input type="button" id="prepBtn" name="prepBtn" value="Prep Pizza" onclick="preppizza()"></p>
+</form>
+<script>
+// var boxes = document.forms["pizzaform"].length;
+
+
+// var newDiv = document.createElement("div");
+//   var newContent = document.createTextNode("Your pizza will have");
+ 
+//   newDiv.appendChild(newContent); //add the text node to the newly created div.
+ 
+//   // add the newly created element and it's content into the DOM
+//   var newDiv = document.createElement("div");
+//   var newContent = document.createTextNode("This Pizza will have: ");
+//   newDiv.appendChild(newContent);
+//   my_div = document.getElementById("org_div1");
+//   document.body.insertBefore(newDiv, my_div);
+//   var boxnum = 0;
+//   for (var i=0; i<7; i++) {
+//     if (document.getElementById("topping" + (i+1)).checked===true) {
+//       var value = document.getElementById("topping" + (i+1)).value;
+//       var newDiv = document.createElement("div");
+//       var newContent = document.createTextNode(value);
+//       newDiv.appendChild(newContent);
+//       my_div = document.getElementById("org_div1");
+//       document.body.insertBefore(newDiv, my_div);
+// }
+// }
+
+</script>
+</body>
+</html>
